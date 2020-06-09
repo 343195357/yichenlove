@@ -60,6 +60,25 @@
             <artifactId>lombok</artifactId>
             <version>1.18.10</version>
         </dependency>
+        <!--Swagger-UI API文档生产工具-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>2.9.2</version>
+        </dependency>
+        <!--下面这个必须有，不然页面不能打开-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger-ui</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+
+        <!--Swagger-UI的皮肤，访问时候使用doc.html，而不是swagger-ui.html-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>swagger-bootstrap-ui</artifactId>
+            <version>1.9.6</version>
+        </dependency>
     </dependencies>
 
 </project>

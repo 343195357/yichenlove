@@ -61,6 +61,17 @@
             <artifactId>hutool-all</artifactId>
             <version>5.3.3</version>
         </dependency>
+        <!--aop用来实现自定义注解+aop解决springBoot防止重复提交-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+        <!--下面引入缓存包，和上面aop搭配使用解决springBoot防止重复提交问题-->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>24.0-jre</version>
+        </dependency>
     </dependencies>
 
 
