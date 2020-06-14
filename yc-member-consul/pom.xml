@@ -9,17 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>yc-member</artifactId>
+    <artifactId>yc-member-consul</artifactId>
     <dependencies>
-        <!-- SpringBoot整合Web组件 -->
+        <!--Springboot整合web组件-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!-- SpringBoot整合eureka客户端 -->
+        <!--Springboot Consul Server依赖,server端已经通过外部启动，该依赖可通过指定地址查找-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+            <artifactId>spring-cloud-starter-consul-discovery</artifactId>
+            <version>2.0.0.RELEASE</version>
         </dependency>
     </dependencies>
+
 </project>

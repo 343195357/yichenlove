@@ -1,0 +1,24 @@
+###服务端口号
+server:
+  port: 8200
+spring:
+  application:
+    name: eureka-server
+###eureka 基本信息配置
+eureka:
+  instance:
+    ###注册到Eureka的ip地址
+    hostname: 127.0.0.1
+  client:
+    serviceUrl:
+      # 这里需要注册到集群的其他Eureka中，如果是多个用逗号隔开
+      defaultZone: http://127.0.0.1:8100/eureka/
+    ### 高可用集群，需要将自己注册到其他的EurekaServer注册中心
+    register-with-eureka: true
+    ### 高可用集群，需要将自己注册到其他的EurekaServer注册中心
+    fetch-registry: true
+  server:
+    # 测试时关闭自我保护机制，保证不可用服务及时踢出
+    enable-self-preservation: false
+    ##剔除失效服务间隔
+    eviction-interval-timer-in-ms: 2000

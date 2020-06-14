@@ -13,6 +13,8 @@
         <module>yc-eureka-server</module>
         <module>yc-member</module>
         <module>yc-order</module>
+        <module>yc-order-consul</module>
+        <module>yc-member-consul</module>
     </modules>
 
     <name>springboot-yiChenLove</name>
@@ -24,7 +26,18 @@
         <artifactId>spring-boot-parent</artifactId>
         <version>2.1.5.RELEASE</version>
     </parent>
-
+    <!-- 管理依赖 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Greenwich.SR1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <!--集成swagger-->
         <!--Swagger-UI API文档生产工具-->
@@ -71,5 +84,15 @@
             <version>1.9.6</version>
         </dependency>
     </dependencies>
-
+    <!-- 注意： 这里必须要添加， 否者各种依赖有问题 -->
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/libs-milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

@@ -1,0 +1,14 @@
+###order-consul 服务端口号
+server:
+  port: 8504
+spring:
+  application:
+    name: yc-order-consul
+  ####consul注册中心地址
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        hostname: localhost
+        health-check-path: /health
