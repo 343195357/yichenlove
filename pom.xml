@@ -17,6 +17,7 @@
         <module>yc-member-consul</module>
         <module>yc-member-zookeeper</module>
         <module>yc-order-zookeeper</module>
+        <module>yc-aop</module>
     </modules>
 
     <name>springboot-yiChenLove</name>
