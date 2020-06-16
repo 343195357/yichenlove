@@ -72,11 +72,11 @@ public class YcLogAspect {
             // 设置方法名称
             String className = joinPoint.getTarget().getClass().getName();
             String methodName = joinPoint.getSignature().getName();
-            log.info("当前调用的方法为：",className + "." + methodName + "()");
+            log.info("当前调用的方法为："+className + "." + methodName + "()");
             Object[] params = joinPoint.getArgs();
-            log.info("当前调用方法参数：", params);
+            log.info("当前调用方法参数："+ params);
             // 保存数据库
-            log.info("日志存入数据库："+ycLog.toString());
+            log.info("日志存入数据库，模块为："+ycLog.modulName()+"功能名称："+ycLog.functionName());
         }
         catch (Exception exp)
         {

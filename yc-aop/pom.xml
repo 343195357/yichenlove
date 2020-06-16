@@ -11,6 +11,11 @@
 
     <artifactId>yc-aop</artifactId>
     <dependencies>
+        <!-- SpringBoot整合Web组件 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <!--引入切面依赖，用于定义自定义日志注解-->
         <dependency>
             <groupId>org.aspectj</groupId>
