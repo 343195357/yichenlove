@@ -1,6 +1,6 @@
 package com.yc.Controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -13,8 +13,8 @@ public class MemberController {
     /**
      * @return 会员接口
      */
-    @RequestMapping("/getMember")
+    @GetMapping("/getMember")
     public String getMember() {
-        return "会员接口调用";
+        return "会员接口调用8011";
     }
 }
